@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SummaryTitleTextStyle">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/widget_text_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SummaryTextStyle">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/widget_text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="WhiteProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">COVID19 Summary</string>
+    <string name="widget_title">Global Summary</string>
+    <string name="new_confirmed_cases_default_text">Confirmed Cases - NA</string>
+    <string name="new_deaths_default_text">Deaths - NA</string>
+    <string name="new_recovered_default_text">Recovered - NA</string>
+    <string name="total_confirmed_cases_default_text">Confirmed Cases - NA</string>
+    <string name="total_deaths_default_text">Deaths - NA</string>
+    <string name="total_recovered_default_text">Recovered - NA</string>
+    <string name="new_summary_title">New</string>
+    <string name="total_summary_title">Total</string>
+</resources>
