@@ -9,4 +9,5 @@
     <string name="total_recovered_default_text">Recovered - NA</string>
     <string name="new_summary_title">New</string>
     <string name="total_summary_title">Total</string>
+    <string name="foreground_not_text">Updating global summary…</string>
 </resources>
