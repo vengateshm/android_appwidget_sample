@@ -10,4 +10,9 @@
     <string name="new_summary_title">New</string>
     <string name="total_summary_title">Total</string>
     <string name="foreground_not_text">Updating global summary…</string>
+    <string name="confirmed_placeholder">Confirmed</string>
+    <string name="confirmed_title">Confirmed</string>
+    <string name="deaths_title">Deaths</string>
+    <string name="recovered_title">Recovered</string>
+    <string name="na">NA</string>
 </resources>

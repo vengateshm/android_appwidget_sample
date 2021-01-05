@@ -157,27 +157,27 @@ class COVIDSummaryAppWidgetProvider : AppWidgetProvider() {
                         )
                         views.setTextViewText(
                             R.id.tvNewConfirmedCases,
-                            "Confirmed Cases - ${summaryResponse.global.newConfirmed}"
+                            "${summaryResponse.global.newConfirmed}"
                         )
                         views.setTextViewText(
                             R.id.tvNewDeaths,
-                            "Deaths - ${summaryResponse.global.newDeaths}"
+                            "${summaryResponse.global.newDeaths}"
                         )
                         views.setTextViewText(
                             R.id.tvNewRecovered,
-                            "Recovered - ${summaryResponse.global.newRecovered}"
+                            "${summaryResponse.global.newRecovered}"
                         )
                         views.setTextViewText(
                             R.id.tvTotalConfirmedCases,
-                            "Confirmed Cases - ${summaryResponse.global.totalConfirmed}"
+                            "${summaryResponse.global.totalConfirmed}"
                         )
                         views.setTextViewText(
                             R.id.tvTotalDeaths,
-                            "Deaths - ${summaryResponse.global.totalDeaths}"
+                            "${summaryResponse.global.totalDeaths}"
                         )
                         views.setTextViewText(
                             R.id.tvTotalRecovered,
-                            "Recovered - ${summaryResponse.global.totalRecovered}"
+                            "${summaryResponse.global.totalRecovered}"
                         )
                         views.setViewVisibility(R.id.ivRefresh, View.VISIBLE)
                         views.setViewVisibility(R.id.progressBar, View.GONE)

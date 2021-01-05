@@ -1,128 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widgetRootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/summary_widget_bg"
+    android:orientation="vertical"
     android:padding="@dimen/widget_margin">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/summary_widget_bg"
-        android:orientation="vertical"
-        android:padding="@dimen/widget_margin">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/ivCovidIcon"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_covid_19" />
-
-            <TextView
-                style="@style/SummaryTitleTextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="40dp"
-                android:layout_toStartOf="@+id/ivRefresh"
-                android:layout_toEndOf="@+id/ivCovidIcon"
-                android:text="@string/widget_title" />
-
-            <ImageView
-                android:id="@+id/ivRefresh"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:padding="4dp"
-                android:src="@drawable/ic_round_refresh_white" />
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:indeterminate="true"
-                android:padding="4dp"
-                android:theme="@style/WhiteProgressBar"
-                android:visibility="gone" />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/ivCovidIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_covid_19" />
 
         <TextView
             style="@style/SummaryTitleTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
             android:layout_marginEnd="40dp"
+            android:layout_toStartOf="@+id/ivRefresh"
+            android:layout_toEndOf="@+id/ivCovidIcon"
+            android:text="@string/widget_title" />
+
+        <ImageView
+            android:id="@+id/ivRefresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:src="@drawable/ic_round_refresh_white" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:padding="4dp"
+            android:theme="@style/WhiteProgressBar"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/GridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true"
+        android:rowCount="4">
+
+        <TextView
+            style="@style/SummaryTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:text="@string/confirmed_placeholder"
+            android:visibility="invisible" />
+
+        <TextView
+            style="@style/SummaryTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
             android:text="@string/new_summary_title" />
+
+        <TextView
+            style="@style/SummaryTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:text="@string/total_summary_title" />
+
+        <TextView
+            style="@style/SummaryTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:text="@string/confirmed_title" />
 
         <TextView
             android:id="@+id/tvNewConfirmedCases"
             style="@style/SummaryTextStyle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/new_confirmed_cases_default_text" />
-
-        <TextView
-            android:id="@+id/tvNewDeaths"
-            style="@style/SummaryTextStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/new_deaths_default_text" />
-
-        <TextView
-            android:id="@+id/tvNewRecovered"
-            style="@style/SummaryTextStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/new_recovered_default_text" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:background="@color/widget_divider_color" />
-
-        <TextView
-            style="@style/SummaryTitleTextStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="40dp"
-            android:text="@string/total_summary_title" />
+            android:text="@string/na" />
 
         <TextView
             android:id="@+id/tvTotalConfirmedCases"
             style="@style/SummaryTextStyle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/total_confirmed_cases_default_text" />
+            android:text="@string/na" />
+
+        <TextView
+            style="@style/SummaryTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:text="@string/deaths_title" />
+
+        <TextView
+            android:id="@+id/tvNewDeaths"
+            style="@style/SummaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/na" />
 
         <TextView
             android:id="@+id/tvTotalDeaths"
             style="@style/SummaryTextStyle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/total_deaths_default_text" />
+            android:text="@string/na" />
+
+        <TextView
+            style="@style/SummaryTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLength="12"
+            android:text="@string/recovered_title" />
+
+        <TextView
+            android:id="@+id/tvNewRecovered"
+            style="@style/SummaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/na" />
 
         <TextView
             android:id="@+id/tvTotalRecovered"
             style="@style/SummaryTextStyle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/total_recovered_default_text" />
-    </LinearLayout>
-
-</FrameLayout>
+            android:text="@string/na" />
+    </GridLayout>
+</LinearLayout>
